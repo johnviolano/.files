@@ -23,6 +23,7 @@ export LC_COLLATE=C
 export GREP_OPTIONS='--color=auto'
 export HISTIGNORE="&:ls:[bf]g:exit"
 
+alias lynx='lynx -vikeys'
 alias ls='ls -G'
 alias mysqlstart='sudo /opt/local/bin/mysqld_safe5 &'
 alias mysqlstop='/opt/local/bin/mysqladmin5 -u root -p shutdown'

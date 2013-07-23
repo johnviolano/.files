@@ -86,6 +86,9 @@ set formatoptions=qrn1
 inoremap <F1> <ESC>
 nnoremap <F1> <ESC>
 vnoremap <F1> <ESC>
+" buffer change with ctrl
+map <C-J> :bnext<CR>
+map <C-K> :bprev<CR>
 
 nnoremap ; :
 

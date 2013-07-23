@@ -1,0 +1,10 @@
+if git rev-parse --git-dir >/dev/null 2>&1
+then
+    gitver=$(git branch --color=never 2>/dev/null | sed -n '/^\*/s/^\* //p')
+    if git diff --quiet 2>/dev/null >&2 
+    then
+        printf " %s%s%s%s" "(" "%{${fg[cyan]}%}" $gitver "%{$reset_color%})" 
+    else
+        printf " %s%s%s%s" "(" "%{${fg[red]}%}" $gitver "%{$reset_color%})" 
+    fi
+fi

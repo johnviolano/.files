@@ -200,7 +200,7 @@ endfunction
 let g:CommandTMaxFiles=100000
 set wildignore+=Frameworks/**,lib/griffin/shared/boost*/**,*.o.d,*.o,*.obj,.git,*.png,*.jpg,*.jpeg,*.swf,*.dds,*.png,*.ccz,*.psd,*.plist,*.fnt,*.mp3,*.class
 
-source ~/.vim/plugin/autotag.vim
+"source ~/.vim/plugin/autotag.vim
 
 " made these changes to match weechat's status line
 hi StatusLine ctermbg=black ctermfg=white cterm=none

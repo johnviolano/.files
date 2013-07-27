@@ -190,6 +190,10 @@ function! SetProj(proj)
                 noremap <F8> :!ctags -R --c++-kinds=+p --fields=+iaS --extra=+q -f ~/Development/dummy/tags ~/Development/dummy <CR>
                 set tags+=~/Development/dummy/tags
                 cd ~/Development/dummy
+        elseif a:proj == "nova"
+                noremap <F8> :!ctags -R --c++-kinds=+p --fields=+iaS --extra=+q -f ~/Development/rednova/tags ~/Development/rednova <CR>
+                set tags+=~/Development/rednova/tags
+                cd ~/Development/rednova
         else
         endif
 endfunction

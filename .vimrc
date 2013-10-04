@@ -89,6 +89,7 @@ vnoremap <F1> <ESC>
 " buffer change with ctrl
 map <C-J> :bnext<CR>
 map <C-K> :bprev<CR>
+map <C-X> :bd<CR>
 
 nnoremap ; :
 
@@ -194,6 +195,10 @@ function! SetProj(proj)
                 noremap <F8> :!ctags -R --c++-kinds=+p --fields=+iaS --extra=+q -f ~/Development/rednova/tags ~/Development/rednova <CR>
                 set tags+=~/Development/rednova/tags
                 cd ~/Development/rednova
+        elseif a:proj == "fg"
+                noremap <F8> :!ctags -R --c++-kinds=+p --fields=+iaS --extra=+q -f ~/Development/rednova/tags ~/Development/fg <CR>
+                set tags+=~/Development/fg/tags
+                cd ~/Development/fg
         else
         endif
 endfunction
@@ -202,10 +207,11 @@ endfunction
 
 " CommandT
 let g:CommandTMaxFiles=100000
-set wildignore+=Frameworks/**,lib/griffin/shared/boost*/**,*.o.d,*.o,*.obj,.git,*.png,*.jpg,*.jpeg,*.swf,*.dds,*.png,*.ccz,*.psd,*.plist,*.fnt,*.mp3,*.class
-
+"set wildignore+=Frameworks/**,lib/griffin/shared/boost*/**,*.o.d,*.o,*.obj,.git,*.png,*.jpg,*.jpeg,*.swf,*.dds,*.png,*.ccz,*.psd,*.plist,*.fnt,*.mp3,*.class,*.wav,*.ttf,*.otf,*.lta
+set wildignore+=Frameworks/**,lib/griffin/shared/boost*/**,Resource/**,android/assets**,android/bin/**,android/gen/**,android/obj/**,android/libs/**,android/revisions/**,android/res/**
 "source ~/.vim/plugin/autotag.vim
 
 " made these changes to match weechat's status line
-hi StatusLine ctermbg=black ctermfg=white cterm=none
-hi StatusLineNC ctermbg=black ctermfg=grey cterm=none
+hi StatusLine ctermbg=23 ctermfg=yellow cterm=none
+hi StatusLineNC ctermbg=23 ctermfg=grey cterm=none
+hi Visual ctermbg=yellow ctermfg=black cterm=none

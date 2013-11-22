@@ -5,6 +5,7 @@ call pathogen#infect()
 call pathogen#helptags()
 "call pathogen#runtime_append_all_bundles()
 
+syntax on
 " don't care about this working on very old terminals
 set nocompatible
 " prevent exploits
@@ -46,14 +47,6 @@ set visualbell
 set t_vb=
 set lazyredraw
 set title
-
-set t_Co=256
-"set background=dark
-" solarized options 
-"let g:solarized_termcolors = 16
-"let g:solarized_visibility = "high"
-"let g:solarized_contrast = "high"
-colorscheme default
 
 
 let mapleader = "," " default is \ which is far
@@ -97,9 +90,6 @@ if has('mouse')
   set mouse=a
 endif
 
-if &t_Co > 2 || has("gui_running")
-  syntax on
-endif
 
 if has("gui_running")
   set transparency=5
@@ -203,7 +193,7 @@ function! SetProj(proj)
         endif
 endfunction
 
-"call SetProj("bs")
+call SetProj("fg")
 
 " CommandT
 let g:CommandTMaxFiles=100000
@@ -212,6 +202,14 @@ set wildignore+=Frameworks/**,lib/griffin/shared/boost*/**,Resource/**,android/a
 "source ~/.vim/plugin/autotag.vim
 
 " made these changes to match weechat's status line
-hi StatusLine ctermbg=23 ctermfg=yellow cterm=none
-hi StatusLineNC ctermbg=23 ctermfg=grey cterm=none
-hi Visual ctermbg=yellow ctermfg=black cterm=none
+"hi StatusLine ctermbg=23 ctermfg=yellow cterm=none
+"hi StatusLineNC ctermbg=23 ctermfg=grey cterm=none
+"hi Visual ctermbg=yellow ctermfg=black cterm=none
+
+
+set t_Co=256
+set background=dark
+"highlight Normal ctermbg=NONE
+"highlight nonText ctermbg=NONE
+"colorscheme desert-warm-256
+colorscheme solarized

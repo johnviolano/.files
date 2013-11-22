@@ -14,10 +14,10 @@ precmd_functions+='precmd_update_git_vars'
 chpwd_functions+='chpwd_update_git_vars'
 
 
-export ANDROID_NDK_ROOT=~/Development/sdk/android-ndk-r8b
+export ANDROID_NDK_ROOT=~/Development/sdk/android-ndk/android-ndk-r9
 export ANDROID_SDK_ROOT=~/Development/sdk/android-sdk-macosx
 #macports path export PATH=$ANDROID_SDK_ROOT:$ANDROID_SDK_ROOT/platform-tools:/opt/local/bin:/opt/local/sbin:$ANDROID_NDK_ROOT:$PATH
-export PATH=/usr/local/bin:/usr/local/sbin:$ANDROID_SDK_ROOT:$ANDROID_SDK_ROOT/platform-tools:$ANDROID_NDK_ROOT:$PATH
+export PATH=/usr/local/bin:/usr/local/sbin:$ANDROID_SDK_ROOT:$ANDROID_SDK_ROOT/tools:$ANDROID_SDK_ROOT/platform-tools:$ANDROID_NDK_ROOT:$PATH
 export NUMBER_OF_PROCESSORS=8
 export LC_COLLATE=C
 export GREP_OPTIONS='--color=auto'

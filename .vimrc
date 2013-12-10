@@ -139,7 +139,7 @@ if has("autocmd") " Only do this part when compiled with support for 'autocomman
         autocmd CursorMovedI * if pumvisible() == 0|pclose|endif
         autocmd InsertLeave * if pumvisible() == 0|pclose|endif
 endif " has("autocmd")
-
+au BufNewFile,BufRead *.proto setf proto
 
 "" OmniCppComplete
 "au BufNewFile,BufRead,BufEnter *.cpp,*.hpp set omnifunc=omni#cpp#complete#Main

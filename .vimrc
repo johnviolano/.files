@@ -193,8 +193,6 @@ function! SetProj(proj)
         endif
 endfunction
 
-call SetProj("fg")
-
 " CommandT
 let g:CommandTMaxFiles=100000
 "set wildignore+=Frameworks/**,lib/griffin/shared/boost*/**,*.o.d,*.o,*.obj,.git,*.png,*.jpg,*.jpeg,*.swf,*.dds,*.png,*.ccz,*.psd,*.plist,*.fnt,*.mp3,*.class,*.wav,*.ttf,*.otf,*.lta

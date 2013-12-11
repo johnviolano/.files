@@ -31,10 +31,6 @@ alias deploystage='fab stage deploy; fab stage sighup_app'
 #alias vim='/Applications/MacPorts/MacVim.app/Contents/MacOS/Vim'
 alias lolcat='$ANDROID_SDK_ROOT/platform-tools/adb lolcat -c; $ANDROID_SDK_ROOT/platform-tools/adb lolcat' 
 
-if [ -f $(which virtualenvwrapper.sh) ]; then
-   source $(which virtualenvwrapper.sh)
-fi
-
 PROMPT=$'
 ┌[%{${fg[white]}%}%B%~%b]$(prompt_git_info)%{${fg[default]}%}
 └» '
